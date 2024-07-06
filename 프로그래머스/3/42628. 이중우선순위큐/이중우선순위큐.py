@@ -11,11 +11,13 @@ def solution(operations):
             if maxi and mini:
                 num = heapq.heappop(maxi)
                 mini.remove(-num)
+                heapq.heapify(mini)
         # 최소 힙에서 최솟값을 pop하고, -를 붙인 값을 최소 힙에서 삭제
         elif i == "D -1":
             if maxi and mini:
                 num = heapq.heappop(mini)
                 maxi.remove(-num)
+                heapq.heapify(maxi)
         # 최소 힙에 push, 최대 힙에 - 붙인 값을 push
         else:
             heapq.heappush(maxi, -int(i[2:]))
