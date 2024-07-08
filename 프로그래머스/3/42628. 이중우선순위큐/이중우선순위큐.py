@@ -11,15 +11,13 @@ def solution(operations):
             if maxi and mini:
                 num = heapq.heappop(maxi)
                 mini.remove(-num)
-                # remove로 깨진 힙 재구조화
-                heapq.heapify(mini)
+                heapq.heapify(mini)     # remove로 깨진 힙 재구조화
         # 최소 힙에서 최솟값을 pop하고, -를 붙인 값을 최소 힙에서 삭제
         elif i == "D -1":
             if maxi and mini:
                 num = heapq.heappop(mini)
                 maxi.remove(-num)
-                # remove로 깨진 힙 재구조화
-                heapq.heapify(maxi)
+                heapq.heapify(maxi)     # remove로 깨진 힙 재구조화
         # 최소 힙에 push, 최대 힙에 - 붙인 값을 push
         else:
             heapq.heappush(maxi, -int(i[2:]))
@@ -27,3 +25,4 @@ def solution(operations):
             
     # 힙이 비었으면 [0, 0], 그렇지 않으면 각 힙에서 최댓값과 최솟값을 찾아 반환
     return [-maxi[0], mini[0]] if maxi and mini else [0, 0]
+
