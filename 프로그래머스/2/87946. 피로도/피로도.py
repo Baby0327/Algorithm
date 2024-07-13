@@ -1,18 +1,25 @@
-from itertools import permutations
+answer = 0
+
+
+def dfs(k, count):
+    global answer   # global은 함수 내에서 전역변수의 값을 변경할 때 선언 필수
+    
+    if count > answer:
+        answer = count
+
+    for i in range(len(dungeon)):
+        if k >= dungeon[i][0] and not visited[i]:
+            visited[i] = True
+            dfs(k - dungeon[i][1], count + 1)
+            visited[i] = False
+
 
 def solution(k, dungeons):
-    answer = 0
+    global dungeon, visited
     
-    # 순열을 통해 모든 조합 찾고, 이를 모두 탐색하며 최대 결과값 찾기
-    for case in permutations(dungeons, len(dungeons)):
-        now = k
-        count = 0
-        
-        for i, j in case:
-            if i <= now:
-                now -= j
-                count += 1
-                
-        answer = max(answer, count)
-        
+    dungeon = dungeons  # 매개변수로 매번 전달하기 번거로워 전역변수로 선언
+    visited = [False] * len(dungeon)
+    
+    dfs(k, 0)
+    
     return answer
