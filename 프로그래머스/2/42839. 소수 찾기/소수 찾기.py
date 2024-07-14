@@ -11,12 +11,12 @@
 def prime(n):
     global num
     
-    num = [True] * (10**n + 1)
+    num = [True] * (10**n)
     num[0], num[1] = False, False
     
     for i in range(2, int(len(num)**0.5) + 1):
         if num[i]:
-            for j in range(i**2, 10**n + 1, i):
+            for j in range(i**2, 10**n, i):
                 num[j] = False
 
 
