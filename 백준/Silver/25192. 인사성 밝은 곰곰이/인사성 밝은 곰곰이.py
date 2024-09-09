@@ -11,7 +11,7 @@ for i in range(n):
 
     if s == "ENTER":
         result += len(emoticon)
-        emoticon = set()
+        emoticon.clear()
     else:
         emoticon.add(s)
 
