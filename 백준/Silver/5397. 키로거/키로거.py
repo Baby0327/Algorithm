@@ -3,13 +3,12 @@
 """
 
 from collections import deque
+import sys
+input = sys.stdin.readline
 
-t = int(input())
-
-for i in range(t):
+def func(l):
     result = deque()
     temp = deque()
-    l = input()
 
     for j in l:
         if j == "<":
@@ -24,4 +23,8 @@ for i in range(t):
         else:
             result.append(j)
 
-    print("".join(result) + "".join(temp))
+    print("".join(result + temp))
+
+
+for i in range(int(input())):
+    func(input().rstrip())
