@@ -10,7 +10,6 @@ n, m = map(int, input().split())
 
 r = [-1, 0, 1, 0]
 c = [0, 1, 0, -1]
-visited = [[False for i in range(m)] for j in range(n)]
 campus = []
 now = deque()
 
@@ -18,9 +17,9 @@ for i in range(n):
     campus.append(list(input().strip()))
 
     for j in range(len(campus[i])):
-        if campus[i][j] == 'I':
+        if campus[i][j] == "I":
             now.append([i, j])
-            visited[i][j] = True
+            campus[i][j] = "X"
 
 count = 0
 
@@ -31,11 +30,11 @@ while now:
         for j in range(4):
             nr, nc = y + r[j], x + c[j]
 
-            if 0 <= nr < n and 0 <= nc < m and not visited[nr][nc] and campus[nr][nc] != 'X':
-                if campus[nr][nc] == 'P':
+            if 0 <= nr < n and 0 <= nc < m and campus[nr][nc] != "X":
+                if campus[nr][nc] == "P":
                     count += 1
 
-                visited[nr][nc] = True
+                campus[nr][nc] = "X"
                 now.append([nr, nc])
 
 print(count if count else "TT")
