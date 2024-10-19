@@ -2,8 +2,11 @@
 A와 B
 """
 
-s = list(input())
-t = list(input())
+import sys
+input = sys.stdin.readline
+
+s = list(map(str, input().strip()))
+t = list(map(str, input().strip()))
 
 while len(s) != len(t):
     x = t.pop()
