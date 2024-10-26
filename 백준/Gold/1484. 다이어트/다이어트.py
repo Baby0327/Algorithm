@@ -1,18 +1,14 @@
-import sys
-input = sys.stdin.readline
-
 g = int(input())
-s = 1
-e = 2
+num = {}
 result = []
 
-while s < e:
-    now = e**2 - s**2
-    if now > g:
-        s += 1
-    else:
-        if now == g:
-            result.append(e)
-        e += 1
+for i in range(1, int(g**0.5) + 1):
+    if g % i == 0 and i != g // i:
+        num[i] = g // i
 
-print("\n".join(map(str, result)) if result else -1)
+for k, v in num.items():
+    temp = (k + v) / 2
+    if temp.is_integer():
+        result.append(int(temp))
+
+print("\n".join(map(str, result[::-1])) if result else -1)
