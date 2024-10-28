@@ -1,8 +1,10 @@
 result = 1000
+check = 0
 
 for i in range(int(input())):
     a, b = map(int, input().split())
-    if a <= b and b < result:
-        result = b
+    if a <= b:
+        result = min(result, b)
+        check = 1
 
-print(result if result != 1000 else -1)
+print(result if check else -1)
