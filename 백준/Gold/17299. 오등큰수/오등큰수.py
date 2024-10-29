@@ -15,4 +15,4 @@ for i in range(n):
         result[stack.pop()] = a[i]
     stack.append(i)
 
-print(*result)
+print(" ".join(map(str, result)))
