@@ -10,11 +10,10 @@ for i in range(int(input())):
 info.sort()
 l, p = map(int, input().split())
 cnt = 0
-now = p
 result = []
 
-while now < l :
-    while info and info[0][0] <= now :
+while p < l :
+    while info and info[0][0] <= p :
         a, b = heapq.heappop(info)
         heapq.heappush(result, [-b, a])
 
@@ -23,7 +22,7 @@ while now < l :
         break
 
     b, a = heapq.heappop(result)
-    now -= b
+    p -= b
     cnt += 1
 
 print(cnt)
