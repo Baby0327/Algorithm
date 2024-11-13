@@ -5,15 +5,11 @@ input = sys.stdin.readline
 n = int(input())
 info = sorted([list(map(int, input().split())) for _ in range(n)])
 h = []
-cnt = 0
+heapq.heappush(h, info[0][1])
 
-for start, end in info:
-    while h and h[0] <= start:
+for i in range(1, n):
+    if info[i][0] >= h[0]:
         heapq.heappop(h)
+    heapq.heappush(h, info[i][1])
 
-    heapq.heappush(h, end)
-
-    if len(h) > cnt:
-        cnt = len(h)
-
-print(cnt)
+print(len(h))
