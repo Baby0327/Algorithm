@@ -1,0 +1,8 @@
+s = input()
+a = s.count("a")
+e = s.count("e")
+i = s.count("i")
+o = s.count("o")
+u = s.count("u")
+y = s.count("y")
+print(a + e + i + o + u, a + e + i + o + u + y)
