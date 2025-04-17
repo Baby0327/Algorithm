@@ -1,3 +1,2 @@
 def solution(slice, n):
-    answer = (n // slice) + int(n % slice != 0)
-    return answer
+    return n // slice + int(n % slice != 0)
