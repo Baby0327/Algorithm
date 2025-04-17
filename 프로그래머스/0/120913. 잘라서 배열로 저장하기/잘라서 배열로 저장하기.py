@@ -1,10 +1,2 @@
-def solution(my_str, n):
-    answer = []
-    
-    for i in range(len(my_str) // n):
-        answer.append(my_str[i * n : i * n + n])
-    
-    if len(my_str) % n:
-        answer.append(my_str[(i + 1) * n :])
-        
-    return answer
+def solution(my_str, n):        
+    return [my_str[i : i + n] for i in range(0, len(my_str), n)]
