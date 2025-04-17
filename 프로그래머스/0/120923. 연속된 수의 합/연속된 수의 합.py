@@ -1,3 +1,3 @@
 def solution(num, total):
-    avg = total // num
-    return [i for i in range(avg - (num - 1) // 2, avg + (num + 2) // 2)]
+    middle = total // num
+    return [i for i in range(middle - num // 2 + int(num % 2 == 0), middle + num // 2 + 1)]
