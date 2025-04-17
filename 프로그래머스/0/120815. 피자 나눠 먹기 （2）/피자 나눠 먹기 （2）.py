@@ -1,7 +1,7 @@
 def solution(n):
     answer = 1
-    while True:
-        if (6 * answer) % n == 0:
-            break
+    
+    while answer * 6 % n != 0:
         answer += 1
+        
     return answer
