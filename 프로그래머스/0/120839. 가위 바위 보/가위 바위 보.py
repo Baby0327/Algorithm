@@ -1,4 +1,3 @@
 def solution(rsp):
-    tmp = ["5", "0", "2"]
-    answer = "".join(tmp[tmp.index(i) - 1] for i in rsp)
-    return answer
+    tip = {"2" : "0", "0" : "5", "5" : "2"}
+    return "".join(tip[i] for i in rsp)
