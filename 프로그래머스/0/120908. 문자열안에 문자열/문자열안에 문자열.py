@@ -1,3 +1,2 @@
 def solution(str1, str2):
-    answer = -int(str2 in str1) + 2
-    return answer
+    return 1 if str2 in str1 else 2
