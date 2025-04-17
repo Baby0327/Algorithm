@@ -1,8 +1,13 @@
 def solution(n):
     answer = 1
-    test = 1
-    while test <= n:
+    total = 1
+    
+    while 1:
+        total *= answer
+        
+        if total > n:
+            break
+        
         answer += 1
-        test *= answer
-    answer -= 1
-    return answer
+    
+    return answer - 1
