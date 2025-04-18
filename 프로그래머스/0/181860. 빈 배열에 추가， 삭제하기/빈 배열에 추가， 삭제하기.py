@@ -1,8 +1,10 @@
 def solution(arr, flag):
     answer = []
-    for i, j in zip(arr, flag):
-        if j:
-            answer += [i] * i * 2
+    
+    for i in range(len(arr)):
+        if flag[i]:
+            answer += [arr[i]] * arr[i] * 2
         else:
-            answer = answer[:-i]
+            answer = answer[:-arr[i]]
+    
     return answer
