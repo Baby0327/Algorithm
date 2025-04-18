@@ -1,11 +1,10 @@
 def solution(s):
-    tmp = s.split()[::-1]
-    i = 0
-    answer = 0
-    while i < len(tmp):
-        if tmp[i] != "Z":
-            answer += int(tmp[i])
+    answer = []
+    
+    for i in s.split():
+        if i == "Z":
+            answer = answer[:-1]
         else:
-            i += 1
-        i += 1    
-    return answer
+            answer.append(int(i))
+    
+    return sum(answer)
