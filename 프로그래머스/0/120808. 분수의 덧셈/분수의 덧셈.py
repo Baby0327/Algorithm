@@ -1,13 +1,10 @@
 def solution(numer1, denom1, numer2, denom2):
-    top = numer1*denom2 + numer2*denom1
-    bottom = denom1*denom2
-    i = 2
+    num1 = numer1 * denom2 + numer2 * denom1
+    num2 = denom1 * denom2
     
-    while i <= min(denom1, denom2):
-        if top % i == 0 and bottom % i == 0:
-            top //= i
-            bottom //= i
-        else:
-            i += 1
-            
-    return [top, bottom]
+    for i in range(min(num1, num2), 1, -1):
+        if num1 % i == 0 and num2 % i == 0:
+            num1 //= i
+            num2 //= i
+    
+    return [num1, num2]
