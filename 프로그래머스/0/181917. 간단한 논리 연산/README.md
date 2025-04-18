@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 10.1 MB, 시간: 0.00 ms
+메모리: 9.17 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 30일 21:03:42
+2025년 04월 18일 18:02:45
 
 ### 문제 설명
 
@@ -81,7 +81,8 @@
 <hr>
 
 <ul>
-<li><p>∨과 ∧의 진리표는 다음과 같습니다.</p>
+<li>∨과 ∧의 진리표는 다음과 같습니다.</li>
+</ul>
 <table class="table">
         <thead><tr>
 <th>x</th>
@@ -109,14 +110,12 @@
 <td>F</td>
 </tr>
 <tr>
-<td>F</td>
+<td></td>
 <td>F</td>
 <td>F</td>
 <td>F</td>
 </tr>
 </tbody>
-      </table></li>
-</ul>
-
+      </table>
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
