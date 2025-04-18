@@ -1,3 +1,11 @@
 def solution(ineq, eq, n, m):
-    answer = int(eval(str(n) + ineq + eq + str(m)) if eq == '=' else eval(str(n) + ineq + str(m)))
-    return answer
+    if ineq == "<":
+        if (eq == "=" and n <= m) or (eq == "!" and n < m):
+            return 1
+        else:
+            return 0
+    else:
+        if (eq == "=" and n >= m) or (eq == "!" and n > m):
+            return 1
+        else:
+            return 0
