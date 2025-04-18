@@ -1,3 +1,2 @@
 def solution(names):
-    answer = names[::5]
-    return answer
+    return [names[i] for i in range(0, len(names), 5)]
