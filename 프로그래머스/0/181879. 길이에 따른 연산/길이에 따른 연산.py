@@ -1,5 +1,10 @@
-from math import *
-
 def solution(num_list):
-    answer = sum(num_list) if len(num_list) > 10 else prod(num_list)
-    return answer
+    if len(num_list) > 10:
+        return sum(num_list)
+    else:
+        answer = 1
+        
+        for i in num_list:
+            answer *= i
+            
+        return answer
