@@ -1,6 +1,7 @@
 def solution(strArr):
-    test = [0] * 31
+    cnt = {}
+    
     for i in strArr:
-        test[len(i)] += 1
-    answer = max(test)
-    return answer
+        cnt[len(i)] = cnt.get(len(i), 0) + 1
+        
+    return sorted(cnt.items(), key=lambda x : x[1])[-1][1]
