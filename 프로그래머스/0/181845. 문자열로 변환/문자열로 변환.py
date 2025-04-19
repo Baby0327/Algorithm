@@ -1,3 +1,2 @@
 def solution(n):
-    answer = str(n)
-    return answer
+    return str(n)
