@@ -1,5 +1,8 @@
-from math import *
-
 def solution(num_list):
-    answer = int(sum(num_list)**2 > prod(num_list))
-    return answer
+    m = 1
+    s = sum(num_list)**2
+    
+    for i in num_list:
+        m *= i
+    
+    return int(m < s)
