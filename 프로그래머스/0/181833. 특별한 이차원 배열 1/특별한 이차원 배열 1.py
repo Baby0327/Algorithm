@@ -1,5 +1,9 @@
 def solution(n):
-    answer = [[0] * n for i in range(n)]
+    answer = []
+    
     for i in range(n):
-        answer[i][i] = 1
+        line = [0] * n
+        line[i] = 1
+        answer.append(line)
+    
     return answer
