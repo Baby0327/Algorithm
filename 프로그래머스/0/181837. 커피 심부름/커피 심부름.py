@@ -1,3 +1,4 @@
 def solution(order):
-    answer = sum([5000 if "latte" in i else 4500 for i in order])
-    return answer
+    latte = len([1 for i in order if "latte" in i])
+    
+    return 5000 * latte + 4500 * (len(order) - latte)
