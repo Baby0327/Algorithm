@@ -1,5 +1,7 @@
 def solution(arr, queries):
-    answer = arr[:]
-    for s, e in queries:
-        answer[s], answer[e] = answer[e], answer[s]
-    return answer
+    for i, j in queries:
+        temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+        
+    return arr
