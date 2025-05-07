@@ -1,4 +1,16 @@
 def solution(numLog):
-    test = {1:'w', -1:'s', 10:'d', -10:'a'}
-    answer = "".join([test[numLog[i] - numLog[i-1]]for i in range(1, len(numLog))])
+    answer = ''
+    
+    for i in range(1, len(numLog)):
+        diff = numLog[i] - numLog[i - 1]
+        
+        if diff == 1:
+            answer += "w"
+        elif diff == -1:
+            answer += "s"
+        elif diff == 10:
+            answer += "d"
+        elif diff == -10:
+            answer += "a"
+    
     return answer
