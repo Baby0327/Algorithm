@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 10.4 MB, 시간: 1.05 ms
+메모리: 9.26 MB, 시간: 1.42 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 30일 21:06:41
+2025년 05월 08일 19:13:44
 
 ### 문제 설명
 
@@ -55,7 +55,8 @@
 <h5>입출력 예 설명</h5>
 
 <ul>
-<li><p>예제 1번의 <code>my_string</code>은 "rermgorpsam"이고 주어진 <code>queries</code>를 순서대로 처리하면 다음과 같습니다.</p>
+<li>예제 1번의 <code>my_string</code>은 "rermgorpsam"이고 주어진 <code>queries</code>를 순서대로 처리하면 다음과 같습니다.</li>
+</ul>
 <table class="table">
         <thead><tr>
 <th>queries</th>
@@ -83,9 +84,7 @@
 <td>"programmers"</td>
 </tr>
 </tbody>
-      </table>
-<p>따라서 "programmers"를 return 합니다.</p></li>
-</ul>
-
+      </table><div class="highlight"><pre class="codehilite"><code>따라서 "programmers"를 return 합니다.
+</code></pre></div>
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges

@@ -1,5 +1,5 @@
 def solution(my_string, queries):
-    answer = my_string
-    for s, e in queries:
-        answer = answer[:s] + answer[s:e+1][::-1] + answer[e+1:]
-    return answer
+    for i, j in queries:
+        my_string = my_string[:i] + my_string[i:j + 1][::-1] + my_string[j + 1:]
+    
+    return my_string
