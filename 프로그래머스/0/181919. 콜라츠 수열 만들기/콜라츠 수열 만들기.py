@@ -1,5 +1,12 @@
 def solution(n):
     answer = [n]
-    while answer[-1] != 1:
-        answer.append(answer[-1] // 2 if answer[-1] % 2 == 0 else answer[-1] * 3 + 1)
+    
+    while n != 1:
+        if n % 2:
+            n = 3 * n + 1
+        else:
+            n = n // 2
+        
+        answer.append(n)
+    
     return answer
