@@ -1,9 +1,8 @@
 def solution(A, B):
-    answer = -1
+    l = len(A)
     
-    for i in range(len(A), 0, -1):
-        if A[i:] + A[:i] == B:
-            answer = len(A) - i
-            break
+    for i in range(l):
+        if A[-i:] + A[:-i] == B:
+            return i
     
-    return answer
+    return -1
