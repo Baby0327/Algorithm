@@ -1,9 +1,14 @@
 def solution(n):
-    num = [True] * (n+1)
-    num[0], num[1] = False, False
-    for i in range(2, n+1):
-        if num[i]:
-            for j in range(i+i, n+1, +i):
-                num[j] = False
-    answer = n - num.count(True) - 1
+    answer = 0
+    
+    for i in range(1, n + 1):
+        check = 0
+        
+        for j in range(2, i):
+            if i % j == 0:
+                check = 1
+                break
+        if check:
+            answer += 1
+    
     return answer
