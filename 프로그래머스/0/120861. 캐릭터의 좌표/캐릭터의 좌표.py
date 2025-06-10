@@ -1,16 +1,14 @@
 def solution(keyinput, board):
-    answer = [0, 0]
-    w = board[0] // 2
-    h = board[1] // 2
+    result = [0, 0]
     
     for i in keyinput:
-        if i == "left" and answer[0] > - w:
-            answer[0] -= 1
-        elif i == "right" and answer[0] < w:
-            answer[0] += 1
-        elif i == "up" and answer[1] < h:
-            answer[1] += 1
-        elif i == "down" and answer[1] > -h:
-            answer[1] -= 1
-            
-    return answer
+        if i == "left" and result[0] > -(board[0] // 2):
+            result[0] -= 1
+        elif i == "right" and result[0] < board[0] // 2:
+            result[0] += 1
+        elif i == "up" and result[1] < board[1] // 2:
+            result[1] += 1
+        elif i == "down" and result[1] > -(board[1] // 2):
+            result[1] -= 1
+    
+    return result
