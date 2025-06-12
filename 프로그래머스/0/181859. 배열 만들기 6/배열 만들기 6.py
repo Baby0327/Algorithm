@@ -1,10 +1,14 @@
 def solution(arr):
     answer = []
-    for i in arr:
-        if not answer or answer[-1] != i:
-            answer.append(i)
-        else:
+    i = 0
+    
+    while i < len(arr):
+        if answer and answer[-1] == arr[i]:
             answer.pop()
-    if not answer:
-        answer.append(-1)
-    return answer
+        else:
+            answer.append(arr[i])
+        
+        i += 1
+    
+    
+    return answer or [-1]
