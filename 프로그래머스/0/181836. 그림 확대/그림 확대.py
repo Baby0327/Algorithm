@@ -1,9 +1,7 @@
 def solution(picture, k):
     answer = []
-    for i in picture:
-        tmp = ""
-        for j in i:
-            tmp += j * k
-        for j in range(k):
-            answer.append(tmp)
+    
+    for line in picture:
+        answer += ["".join([i*k for i in line])] * k
+            
     return answer
