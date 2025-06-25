@@ -1,17 +1,17 @@
 def solution(code):
     answer = ''
     mode = 0
-    i = 0
-    while i < len(code):
-        if code[i] == '1':
-            mode = not(mode)
-            i += 1
-            continue
+    
+    for i in range(len(code)):
         if mode:
-            if i % 2 == 1:
+            if code[i] == "1":
+                mode = 0
+            elif i % 2:
                 answer += code[i]
         else:
-            if i % 2 == 0:
+            if code[i] == "1":
+                mode = 1
+            elif i % 2 == 0:
                 answer += code[i]
-        i += 1
-    return answer or 'EMPTY'
+            
+    return answer or "EMPTY"
