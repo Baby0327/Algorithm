@@ -1,4 +1,3 @@
 def solution(rank, attendance):
-    three = sorted([rank[i] for i in range(len(rank)) if attendance[i]])[:3]
-    answer = 10000 * rank.index(three[0]) + 100 * rank.index(three[1]) + rank.index(three[2])
-    return answer
+    a, b, c = [i[1] for i in (sorted([[value, index] for index, value in enumerate(rank) if attendance[index]])[:3])]
+    return 10000 * a + 100 * b + c
