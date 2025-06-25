@@ -1,8 +1,8 @@
 def solution(arr, query):
-    answer = arr
     for i in range(len(query)):
-        if i % 2 == 0:
-            answer = answer[:query[i]+1]
+        if i % 2:
+            arr = arr[query[i]:]
         else:
-            answer = answer[query[i]:]
-    return answer
+            arr = arr[:query[i] + 1]
+    
+    return arr
