@@ -1,8 +1,8 @@
 def solution(lines):
-    line = [0] * 200
+    count = {}
     
-    for start, end in lines:
-        for i in range(start, end):
-            line[i] += 1
-            
-    return len([1 for i in line if i > 1])
+    for s, e in lines:
+        for i in range(s, e):
+            count[i] = count.get(i, 0) + 1
+    
+    return len(sorted(filter(lambda x : x[1] > 1, count.items())))
