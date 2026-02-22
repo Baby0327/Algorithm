@@ -1,0 +1,6 @@
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+p = int(input())
+print(min(a * p, b + int(c < p) * (p - c) * d))
