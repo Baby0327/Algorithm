@@ -1,2 +1,2 @@
 n = int(input())
-print(sum([int(i * (i + 1) * 1.5) for i in range(1, n + 1)]))
+print(n * (n + 1) * (n + 2) // 2)
