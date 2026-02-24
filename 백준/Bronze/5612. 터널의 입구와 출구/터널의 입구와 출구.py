@@ -1,15 +1,11 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-now = int(input())
-maxi = [now]
+c = [int(input())]
 
 for i in range(n):
     s, e = map(int, input().split())
-    now += s - e
+    c.append(c[-1] + s - e)
 
-    if now < 0:
-        maxi = [0]
-        break
-
-    maxi.append(now)
-
-print(max(maxi))
+print(max(c) if min(c) >= 0 else 0)
