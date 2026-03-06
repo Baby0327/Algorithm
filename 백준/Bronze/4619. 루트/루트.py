@@ -4,9 +4,5 @@ while 1:
     if b == n == 0:
         break
 
-    a = 0
-
-    while a ** n <= b:
-        a += 1
-
-    print(a if b - (a - 1)**n > a**n - b else a - 1)
+    a = int(b**(1/n))
+    print(a + 1 if b - a**n > (a + 1)**n - b else a)
