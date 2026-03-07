@@ -1,6 +1,2 @@
 s, t = input(), input()
-
-if s * len(t) == t * len(s):
-    print(1)
-else:
-    print(0)
+print(1 if s * len(t) == t * len(s) else 0)
