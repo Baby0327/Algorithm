@@ -1,2 +1,1 @@
-n = int(input())
-print(2**(n // 2 + int(n % 2 > 0)) % 16769023)
+print(2**((int(input()) + 1) // 2) % 16769023)
