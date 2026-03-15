@@ -6,7 +6,7 @@ num = [n[ord(b[i // 2]) - 65] if i % 2 else n[ord(a[i // 2]) - 65] for i in rang
 while len(num) > 2:
     temp = []
     for i in range(len(num) - 1):
-        temp.append(int(str(num[i] + num[i + 1])[-1]))
+        temp.append((num[i] + num[i + 1]) % 10)
     num = temp
 
-print("".join(map(str, num)))
+print(*num, sep="")
