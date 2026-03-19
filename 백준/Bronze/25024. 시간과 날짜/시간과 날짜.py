@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 for _ in range(int(input())):
